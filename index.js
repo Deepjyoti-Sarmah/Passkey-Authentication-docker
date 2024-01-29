@@ -8,6 +8,9 @@ app.get("/", (req, res) => {
   res.send("Passkey authentication");
 });
 
+//Routes
+app.use("/", require("./config/routes"));
+
 app.listen(PORT, ()=> {
   console.log(`Server is listening at port ${PORT}`);
 });
